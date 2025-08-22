@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Santiago López</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Santiago López</h2>
+    <h3>Stacks</h3>
+    <div class="stacks" id="stacks-container">
+      <!-- Aquí se cargan los stacks dinámicamente -->
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="header">
+      <h1>Proyectos</h1>
+      <a href="https://github.com/SantiagoEmilio" target="_blank" class="github-btn">Mi GitHub</a>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Proyecto</th>
+          <th>Stacks</th>
+          <th>Pages</th>
+          <th>Repositorio</th>
+        </tr>
+      </thead>
+      <tbody id="proyectos-container">
+        <!-- Se generan los proyectos con JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="data/proyectos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

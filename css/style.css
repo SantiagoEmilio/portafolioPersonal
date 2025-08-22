@@ -1,0 +1,255 @@
+/* ================== */
+/* ✨ Google Fonts    */
+/* ================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* ================== */
+/* 🎨 Estilos Globales */
+/* ================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  color: #333;
+
+  /* Fondo animado */
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #4a00e0, #8e2de2);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  transition: background 0.3s ease;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================== */
+/* 📌 Sidebar         */
+/* ================== */
+.sidebar {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  border-radius: 0 20px 20px 0;
+  animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================== */
+/* 🖼️ Stacks          */
+/* ================== */
+.stacks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 14px;
+}
+
+.stacks img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stacks img:hover {
+  transform: scale(1.15) rotate(3deg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ================== */
+/* 📝 Main Content    */
+/* ================== */
+.main {
+  flex: 1;
+  padding: 30px;
+  overflow-x: auto;
+  animation: fadeIn 0.6s ease;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+/* ================== */
+/* 🟢 GitHub Button   */
+/* ================== */
+.github-btn {
+  background: linear-gradient(135deg, #00b894, #019170);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.github-btn:hover {
+  background: linear-gradient(135deg, #0984e3, #00b894);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ================== */
+/* 📊 Tabla Proyectos */
+/* ================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 15px;
+  color: #f1f1f1;
+}
+
+th {
+  background: rgba(255,255,255,0.15);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+}
+
+tbody tr {
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(0, 184, 148, 0.15);
+}
+
+/* ================== */
+/* 🔘 Botones tabla   */
+/* ================== */
+.repo-btn, .page-btn {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.repo-btn {
+  background: linear-gradient(135deg, #2d3436, #636e72);
+}
+
+.page-btn {
+  background: linear-gradient(135deg, #0984e3, #065bb5);
+}
+
+.repo-btn:hover {
+  background: linear-gradient(135deg, #000, #2d3436);
+  transform: translateY(-3px);
+}
+
+.page-btn:hover {
+  background: linear-gradient(135deg, #00b894, #019170);
+  transform: translateY(-3px);
+}
+
+/* ================== */
+/* 📱 Responsividad   */
+/* ================== */
+@media (max-width: 992px) {
+  body { flex-direction: column; }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .main { padding: 20px; }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .github-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stacks {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .repo-btn, .page-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
